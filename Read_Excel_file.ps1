@@ -6,6 +6,7 @@ $objExcel = New-Object -ComObject Excel.Application
 $workbook = $objExcel.Workbooks.Open($file)
 $sheet = $workbook.Worksheets.Item($sheetName)
 $objExcel.Visible=$false
+$objExcel.DisplayAlert=$False
 #Count max row
 $rowMax = ($sheet.UsedRange.Rows).count
 #Declare the starting positions
@@ -25,3 +26,4 @@ Write-Host ("I live in: "+$city)
 }
 #close excel file
 $objExcel.quit()
+Stop-Process -processname EXCEL
