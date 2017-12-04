@@ -1,5 +1,5 @@
 ﻿#Declare the file path and sheet name
-$file = "C:\Users\dhara\OneDrive\Desktop\test.xlsx"
+$file = ".\test.xlsx"
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
